@@ -6,12 +6,7 @@ class CharacterCard extends StatelessWidget {
   final String imageUrl;
   final List<String> films;
 
-  const CharacterCard({
-    super.key,
-    required this.name,
-    required this.imageUrl,
-    required this.films,
-  });
+  const CharacterCard({super.key, required this.name, required this.imageUrl, required this.films});
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +15,10 @@ class CharacterCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16.0),
         child: DecoratedBox(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20.0),
-          ),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0)),
           child: Stack(
             children: <Widget>[
-              CharacterImage(
-                imageUrl,
-                radius: 20.0,
-                dimension: double.infinity,
-              ),
+              CharacterImage(imageUrl, radius: 20.0, dimension: double.infinity),
               const CharacterOverlay(),
               Positioned(
                 bottom: 12.0,
@@ -41,19 +30,12 @@ class CharacterCard extends StatelessWidget {
                       name,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 4.0),
                     Text(
                       films.isNotEmpty ? films.first : '',
-                      style: const TextStyle(
-                        fontSize: 14.0,
-                        color: Colors.white,
-                      ),
+                      style: const TextStyle(fontSize: 14.0, color: Colors.white),
                     ),
                   ],
                 ),

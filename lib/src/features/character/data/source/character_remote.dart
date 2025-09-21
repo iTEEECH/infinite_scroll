@@ -11,9 +11,7 @@ class CharacterRemote {
 
   Future<List<CharacterModel>> fetchAll(int page, [int pageSize = 10]) async {
     // Path.
-    final Uri url = Uri.parse(
-      '$_kBaseUrl/character?page=$page&pageSize=$pageSize',
-    );
+    final Uri url = Uri.parse('$_kBaseUrl/character?page=$page&pageSize=$pageSize');
 
     try {
       // Http call.
@@ -24,9 +22,7 @@ class CharacterRemote {
         final body = Map<String, dynamic>.from(jsonDecode(response.body));
         final results = List<Map<String, dynamic>>.from(body['data']);
         if (results.isNotEmpty) {
-          return results
-              .map((result) => CharacterModel.fromMap(result))
-              .toList(growable: false);
+          return results.map((result) => CharacterModel.fromMap(result)).toList(growable: false);
         }
       }
       return <CharacterModel>[];

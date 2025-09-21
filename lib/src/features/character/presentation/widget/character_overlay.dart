@@ -13,10 +13,7 @@ class CharacterOverlay extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
-            colors: <Color>[
-              Colors.black.withValues(alpha: 0.8),
-              Colors.white.withValues(alpha: 0.2),
-            ],
+            colors: <Color>[Colors.black.withValues(alpha: 0.8), Colors.white.withValues(alpha: 0.2)],
           ),
         ),
       ),

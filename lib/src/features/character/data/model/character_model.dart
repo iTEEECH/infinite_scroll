@@ -6,11 +6,7 @@ class CharacterModel extends Equatable {
   final String imageUrl;
   final List<String> films;
 
-  const CharacterModel({
-    required this.name,
-    required this.imageUrl,
-    required this.films,
-  });
+  const CharacterModel({required this.name, required this.imageUrl, required this.films});
 
   factory CharacterModel.fromMap(Map<String, dynamic> map) {
     return CharacterModel(
@@ -21,20 +17,11 @@ class CharacterModel extends Equatable {
   }
 
   Character toEntity() {
-    return Character(
-      name: name,
-      imageUrl: imageUrl,
-      films: films,
-    );
+    return Character(name: name, imageUrl: imageUrl, films: films);
   }
 
   @override
   List<Object> get props {
-    return [
-      name,
-      imageUrl,
-      films,
-    ];
+    return [name, imageUrl, films];
   }
-
 }

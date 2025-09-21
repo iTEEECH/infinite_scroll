@@ -9,12 +9,7 @@ class CharacterList extends StatelessWidget {
 
   final bool isLoading;
 
-  const CharacterList({
-    super.key,
-    required this.controller,
-    required this.characters,
-    required this.isLoading,
-  });
+  const CharacterList({super.key, required this.controller, required this.characters, required this.isLoading});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +19,7 @@ class CharacterList extends StatelessWidget {
       physics: const ClampingScrollPhysics(),
       prototypeItem: SizedBox.square(dimension: 180.0),
       itemBuilder: (_, int index) {
-        if(index < characters.length) {
+        if (index < characters.length) {
           final Character character = characters[index];
           return CharacterCard(
             key: ValueKey(index),

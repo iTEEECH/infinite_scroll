@@ -61,11 +61,7 @@ class _CharacterPageState extends State<CharacterPage> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
-          child: CharacterList(
-            characters: _characters,
-            controller: _controller,
-            isLoading: _isLoading,
-          ),
+          child: CharacterList(characters: _characters, controller: _controller, isLoading: _isLoading),
         ),
       ),
     );

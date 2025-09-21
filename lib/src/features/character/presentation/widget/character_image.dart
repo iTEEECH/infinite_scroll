@@ -28,10 +28,7 @@ class CharacterImage extends StatelessWidget {
         decoration: BoxDecoration(
           color: bgColor,
           borderRadius: BorderRadius.circular(radius),
-          image: DecorationImage(
-            image: Image.network(path).image,
-            fit: BoxFit.cover,
-          ),
+          image: DecorationImage(image: Image.network(path).image, fit: BoxFit.cover),
         ),
       ),
     );
